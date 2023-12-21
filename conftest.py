@@ -1,11 +1,9 @@
-
 import pytest
 
 from selenium import webdriver
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
 
-from locators.order_page_locators import OrderPageLocators
+from pages.main_page import MainPage
+from pages.order_page import OrderPage
 
 
 @pytest.fixture()  # драйвер для setup и teardown браузера
@@ -16,13 +14,12 @@ def driver():
 
 
 @pytest.fixture()
-def open_order_url(driver):
-    order_url = 'https://qa-scooter.praktikum-services.ru/order'
-    driver.get(order_url)
-    WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(OrderPageLocators.ORDER_FORM))
+def order_page(driver):
+    driver.get('https://qa-scooter.praktikum-services.ru/order')
+    return OrderPage(driver)
 
 
 @pytest.fixture()
-def open_main_page_url(driver):
-    main_page_url = 'https://qa-scooter.praktikum-services.ru/'
-    driver.get(main_page_url)
+def main_page(driver):
+    driver.get('https://qa-scooter.praktikum-services.ru/')
+    return MainPage(driver)
