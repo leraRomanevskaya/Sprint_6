@@ -10,7 +10,7 @@ class TestOrder:
     @allure.description('Проверка открытия формы заказа через первую кнопку "Заказать"')
     def test_opened_the_order_form_through_the_main_button(self, main_page):
         main_page.click_the_main_order_button()
-        assert main_page.get_driver().current_url == 'https://qa-scooter.praktikum-services.ru/order'
+        assert main_page.get_current_url() == 'https://qa-scooter.praktikum-services.ru/order'
         order_page = OrderPage(main_page.get_driver())
         assert order_page.is_order_form_visible()
 
@@ -19,7 +19,7 @@ class TestOrder:
     def test_opened_the_order_form_through_the_middle_button(self, main_page):
         main_page.scroll_to_the_middle_order_button()
         main_page.click_the_middle_order_button()
-        assert main_page.get_driver().current_url == 'https://qa-scooter.praktikum-services.ru/order'
+        assert main_page.get_current_url() == 'https://qa-scooter.praktikum-services.ru/order'
         order_page = OrderPage(main_page.get_driver())
         assert order_page.is_order_form_visible()
 

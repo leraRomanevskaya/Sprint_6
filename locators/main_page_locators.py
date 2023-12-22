@@ -20,3 +20,5 @@ class MainPageLocators:
     CANCEL_THE_ORDER_ANSWER = (By.XPATH, './/div/p[starts-with(text(),"Да, пока самокат")]')
     LIFE_BEYOND_THE_MKAD_QUESTION = (By.XPATH, './/div[@id="accordion__heading-7"]')
     LIFE_BEYOND_THE_MKAD_ANSWER = (By.XPATH, './/div/p[starts-with(text(),"Да, обязательно")]')
+    ORDER_BUTTON_MAIN = (By.XPATH, './/button[@class="Button_Button__ra12g"]')
+    ORDER_BUTTON_MIDDLE = (By.XPATH, './/button[@class="Button_Button__ra12g Button_Middle__1CSJM"]')

@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 class OrderPageLocators:
     """Класс с локаторами на странице заказа."""
     ORDER_FORM = (By.CLASS_NAME, 'Order_Content__bmtHS')
+    ORDER_BUTTON_MIDDLE = (By.XPATH, './/button[@class="Button_Button__ra12g Button_Middle__1CSJM"]')
     FORM_NAME = (By.XPATH, './/input[@placeholder="* Имя"]')
     FORM_SURNAME = (By.XPATH, './/input[@placeholder="* Фамилия"]')
     ADDRESS = (By.XPATH, './/input[@placeholder="* Адрес: куда привезти заказ"]')
@@ -21,3 +22,5 @@ class OrderPageLocators:
     TWO_DAY_RENT = (By.XPATH, '.// div[starts-with(text(), "двое суток")]')
     ACCEPT_BUTTON = (By.XPATH, './/button[starts-with(text(), "Да")]')
     SUCCESSFUL_ORDER_HEADER = (By.CLASS_NAME, 'Order_ModalHeader__3FDaJ')
+    SCOOTER_LOGO = (By.CLASS_NAME, 'Header_LogoScooter__3lsAR')
+    YANDEX_LOGO = (By.CLASS_NAME, 'Header_LogoYandex__3TSOI')
